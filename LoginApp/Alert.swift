@@ -16,12 +16,12 @@ class Alert{
     }
     static func userNameAlert(vc: UIViewController){
         let userName = MainViewController()
-        showBasicAlert(vc: vc, title: "Error", message: "You user name is \(userName.userName)")
+        showBasicAlert(vc: vc, title: "Forgot your name?", message: "You user name is \(userName.userName)")
     }
     
     static func passwordAlert(vc: UIViewController){
         let password = MainViewController()
-        showBasicAlert(vc: vc, title: "Error", message: "You password is \(password.password)")
+        showBasicAlert(vc: vc, title: "Forgot your password?", message: "You password is \(password.password)")
     }
     
     static func wrongData(vc: UIViewController){

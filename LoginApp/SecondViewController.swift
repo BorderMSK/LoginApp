@@ -9,6 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController{
     
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     

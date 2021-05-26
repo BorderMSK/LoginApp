@@ -15,20 +15,20 @@ class MainViewController: UIViewController{
     internal let userName = "User"
     internal let password = "Password"
     
-    func addTapGestureToHideKeyboard() {
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        addTapGestureToHideKeyboard()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "LogIn" else { return }
         let destination = segue.destination as! SecondViewController
         destination.userName = userNameTextField.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     
     @IBAction func logInButton(_ sender: Any) {
@@ -50,4 +50,16 @@ class MainViewController: UIViewController{
     @IBAction func forgotPasswordButton(_ sender: Any) {
         Alert.passwordAlert(vc: self)
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        userNameTextField.text = nil
+        passwordTextField.text = nil
+    }
+    
+    
+    
+    
+    
+    
+    
 }
