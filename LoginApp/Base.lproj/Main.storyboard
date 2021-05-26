@@ -32,15 +32,19 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-av-IVK">
-                                <rect key="frame" x="162" y="443" width="80" height="48"/>
+                                <rect key="frame" x="150" y="443" width="114" height="48"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Log In"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlO-gu-F2V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWg-7s-GNH">
-                                <rect key="frame" x="140" y="161" width="134" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome user!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWg-7s-GNH">
+                                <rect key="frame" x="111" y="161" width="192" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,14 +54,22 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-qv-5kz">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
-                                        <state key="normal" title="Forgot User Name?"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <state key="normal" title="Forgot User Name?">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="forgotUserNameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfh-GT-e4B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emo-hS-HeX">
                                         <rect key="frame" x="191" y="0.0" width="123" height="30"/>
-                                        <state key="normal" title="Forgot Password?"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <state key="normal" title="Forgot Password?">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="forgotPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epU-UW-L8M"/>
                                         </connections>
@@ -70,12 +82,12 @@
                         <constraints>
                             <constraint firstItem="B3f-pk-3U3" firstAttribute="topMargin" secondItem="uWg-7s-GNH" secondAttribute="bottom" constant="120" id="2qt-zz-pq3"/>
                             <constraint firstItem="2sb-av-IVK" firstAttribute="top" secondItem="B3f-pk-3U3" secondAttribute="bottom" constant="30" id="BiK-CI-n4S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sb-av-IVK" secondAttribute="trailing" constant="172" id="EyP-jr-aEa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sb-av-IVK" secondAttribute="trailing" constant="150" id="EyP-jr-aEa"/>
                             <constraint firstItem="uWg-7s-GNH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="Fb7-nj-z0l"/>
                             <constraint firstItem="uWg-7s-GNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HwC-Bo-bk8"/>
                             <constraint firstItem="7js-1Q-QXe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zrk-cE-g9k"/>
                             <constraint firstItem="7js-1Q-QXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bdf-AY-7Mt"/>
-                            <constraint firstItem="2sb-av-IVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="g5H-4e-6e4"/>
+                            <constraint firstItem="2sb-av-IVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="g5H-4e-6e4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7js-1Q-QXe" secondAttribute="trailing" constant="50" id="hCi-nB-1cD"/>
                             <constraint firstItem="B3f-pk-3U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="npt-ok-0o1"/>
                             <constraint firstItem="7js-1Q-QXe" firstAttribute="top" secondItem="2sb-av-IVK" secondAttribute="bottom" constant="45" id="wa2-a5-fwM"/>
@@ -110,8 +122,12 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FD-QR-GMq">
                                 <rect key="frame" x="158" y="508" width="98" height="48"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Log out"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="logOutButton:" destination="CZW-K7-GWw" eventType="touchUpInside" id="m0p-da-v2a"/>
                                     <segue destination="qS6-Sp-1Oi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="UvR-ca-xJT"/>

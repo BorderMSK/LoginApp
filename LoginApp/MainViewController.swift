@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController{
+class MainViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,6 +18,8 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        changeBackground()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,14 +33,21 @@ class MainViewController: UIViewController{
         self.view.endEditing(true)
     }
     
+    func changeBackground(){
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode = .scaleToFill
+        view.insertSubview(backgroundImage, at: 0)
+    }
+    
     @IBAction func logInButton(_ sender: Any) {
         guard
-        userNameTextField.text == userName,
-        passwordTextField.text == password
-            else {
+            userNameTextField.text == userName,
+            passwordTextField.text == password
+        else {
             Alert.wrongData(vc: self)
             passwordTextField.text = nil
-                return
+            return
         }
         performSegue(withIdentifier: "LogIn", sender: nil)
     }
@@ -55,11 +64,5 @@ class MainViewController: UIViewController{
         userNameTextField.text = nil
         passwordTextField.text = nil
     }
-    
-    
-    
-    
-    
-    
-    
 }
+

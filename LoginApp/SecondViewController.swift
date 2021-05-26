@@ -18,7 +18,15 @@ class SecondViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "Welcome, \(userName ?? "Noname")!"
-
+        changeBackground()
+        
+    }
+    
+    func changeBackground(){
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode = .scaleToFill
+        view.insertSubview(backgroundImage, at: 0)
     }
     
     @IBAction func logOutButton(_ sender: Any) {
