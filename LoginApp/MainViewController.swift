@@ -12,6 +12,10 @@ class MainViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgotUserNameButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    
     internal let userName = "User"
     internal let password = "Password"
     
@@ -19,6 +23,7 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         changeBackground()
+        changeButtons()
         
     }
     
@@ -38,6 +43,12 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         backgroundImage.image = UIImage(named: "Background")
         backgroundImage.contentMode = .scaleToFill
         view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    func changeButtons(){
+        loginButton.layer.cornerRadius = 10
+        forgotPasswordButton.layer.cornerRadius = 10
+        forgotUserNameButton.layer.cornerRadius = 10
     }
     
     @IBAction func logInButton(_ sender: Any) {
