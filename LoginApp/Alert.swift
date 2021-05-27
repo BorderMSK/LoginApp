@@ -12,6 +12,7 @@ class Alert{
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         vc.present(alert, animated: true)
+        
     }
     static func userNameAlert(vc: UIViewController){
         let userName = MainViewController()

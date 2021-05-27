@@ -52,7 +52,7 @@ class MainViewController: UIViewController{
         forgotUserNameButton.layer.cornerRadius = 10
     }
     
-    @IBAction func logInButton() {
+    @IBAction func logInButton(_ sender: Any) {
         guard
             userNameTextField.text == userName,
             passwordTextField.text == password
@@ -84,9 +84,8 @@ extension MainViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
         } else{
-            logInButton()
-            }
+            logInButton((Any).self)
+        }
         return true
     }
 }
-

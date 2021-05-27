@@ -141,8 +141,8 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="logOutButton:" destination="CZW-K7-GWw" eventType="touchUpInside" id="m0p-da-v2a"/>
-                                            <segue destination="qS6-Sp-1Oi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="UvR-ca-xJT"/>
+                                            <action selector="logOutButton:" destination="CZW-K7-GWw" eventType="touchUpInside" id="ke4-pw-Cze"/>
+                                            <segue destination="qS6-Sp-1Oi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="LAo-XX-mGU"/>
                                         </connections>
                                     </button>
                                 </subviews>
