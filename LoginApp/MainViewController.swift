@@ -84,7 +84,7 @@ extension MainViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
         } else{
-            logInButton((Any).self)
+            logInButton(self)
         }
         return true
     }
