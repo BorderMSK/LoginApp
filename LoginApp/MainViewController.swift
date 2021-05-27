@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate{
+class MainViewController: UIViewController{
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,7 +24,8 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         self.navigationController?.isNavigationBarHidden = true
         changeBackground()
         changeButtons()
-        
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +52,7 @@ class MainViewController: UIViewController, UITextFieldDelegate{
         forgotUserNameButton.layer.cornerRadius = 10
     }
     
-    @IBAction func logInButton(_ sender: Any) {
+    @IBAction func logInButton() {
         guard
             userNameTextField.text == userName,
             passwordTextField.text == password
@@ -74,6 +75,18 @@ class MainViewController: UIViewController, UITextFieldDelegate{
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
         userNameTextField.text = nil
         passwordTextField.text = nil
+    }
+}
+
+extension MainViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField{
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else{
+            logInButton()
+            }
+        return true
     }
 }
 
