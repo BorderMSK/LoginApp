@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="B3f-pk-3U3">
-                                <rect key="frame" x="40" y="322.33333333333331" width="348" height="96"/>
+                                <rect key="frame" x="60" y="322.33333333333331" width="308" height="96"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-fM-TgB">
-                                        <rect key="frame" x="0.0" y="0.0" width="348" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2P-M3-KOr">
-                                        <rect key="frame" x="0.0" y="62" width="348" height="34"/>
+                                        <rect key="frame" x="0.0" y="62" width="308" height="34"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
@@ -39,14 +39,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-XX-CtA">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-XX-CtA">
                                 <rect key="frame" x="60.666666666666657" y="453.33333333333331" width="307" height="95.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-av-IVK">
-                                        <rect key="frame" x="114" y="0.0" width="79" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Log In">
+                                        <state key="normal" title="Log in">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -85,10 +85,10 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="B3f-pk-3U3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="4bb-tY-Ypq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B3f-pk-3U3" secondAttribute="trailing" constant="40" id="8pn-Fl-hi7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B3f-pk-3U3" secondAttribute="trailing" constant="60" id="8pn-Fl-hi7"/>
                             <constraint firstItem="MmI-XX-CtA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E3u-Ak-KYb"/>
                             <constraint firstItem="uWg-7s-GNH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="ZRK-Sb-4kL"/>
-                            <constraint firstItem="B3f-pk-3U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="jmR-58-Kig"/>
+                            <constraint firstItem="B3f-pk-3U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="jmR-58-Kig"/>
                             <constraint firstItem="B3f-pk-3U3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mQf-zc-CVf"/>
                             <constraint firstItem="MmI-XX-CtA" firstAttribute="top" secondItem="B3f-pk-3U3" secondAttribute="bottom" constant="35" id="uDy-lD-BsJ"/>
                             <constraint firstItem="uWg-7s-GNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1y-oL-42W"/>
