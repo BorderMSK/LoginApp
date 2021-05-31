@@ -12,15 +12,15 @@ class Alert{
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         vc.present(alert, animated: true)
-        
     }
+    
     static func userNameAlert(vc: UIViewController){
-        let userName = MainViewController()
-        showBasicAlert(vc: vc, title: "Forgot your name?", message: "You user name is \(userName.userName)")
+        let user = User.getUserData()
+        showBasicAlert(vc: vc, title: "Forgot your name?", message: "You user name is \(user.login)")
     }
     
     static func passwordAlert(vc: UIViewController){
-        let password = MainViewController()
+        let password = User.getUserData()
         showBasicAlert(vc: vc, title: "Forgot your password?", message: "You password is \(password.password)")
     }
     

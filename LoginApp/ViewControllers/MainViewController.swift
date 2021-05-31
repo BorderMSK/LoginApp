@@ -16,8 +16,7 @@ class MainViewController: UIViewController{
     @IBOutlet weak var forgotUserNameButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
-    internal let userName = "User"
-    internal let password = "Password"
+    var user = User.getUserData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +28,19 @@ class MainViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "LogIn" else { return }
-        let destination = segue.destination as! SecondViewController
-        destination.userName = userNameTextField.text
+        if let tabBar = segue.destination as? UITabBarController{
+            tabBar.viewControllers?.forEach {
+                if let viewContoller = $0 as? WelcomeViewController{
+                    viewContoller.userName = user.login
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
-    
-    func changeBackground(){
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode = .scaleToFill
-        view.insertSubview(backgroundImage, at: 0)
-    }
-    
     func changeButtons(){
         loginButton.layer.cornerRadius = 10
         forgotPasswordButton.layer.cornerRadius = 10
@@ -54,8 +49,8 @@ class MainViewController: UIViewController{
     
     @IBAction func logInButton(_ sender: Any) {
         guard
-            userNameTextField.text == userName,
-            passwordTextField.text == password
+            userNameTextField.text == user.login,
+            passwordTextField.text == user.password
         else {
             Alert.wrongData(vc: self)
             passwordTextField.text = nil
@@ -77,7 +72,6 @@ class MainViewController: UIViewController{
         passwordTextField.text = nil
     }
 }
-
 extension MainViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField{
@@ -87,5 +81,13 @@ extension MainViewController: UITextFieldDelegate {
             logInButton(self)
         }
         return true
+    }
+}
+extension UIViewController {
+    func changeBackground(){
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "Background")
+        backgroundImage.contentMode = .scaleToFill
+        view.insertSubview(backgroundImage, at: 0)
     }
 }
