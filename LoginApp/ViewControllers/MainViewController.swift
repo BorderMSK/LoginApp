@@ -23,6 +23,7 @@ class MainViewController: UIViewController{
         self.navigationController?.isNavigationBarHidden = true
         changeBackground()
         changeButtons()
+        viewWillAppear(true)
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -36,7 +37,6 @@ class MainViewController: UIViewController{
             }
         }
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)

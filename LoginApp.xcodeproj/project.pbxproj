@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5EA8682664F3E900F5C373 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5EA8672664F3E900F5C373 /* InfoViewController.swift */; };
 		BC9894FB265D8DF200732CEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9894FA265D8DF200732CEE /* AppDelegate.swift */; };
 		BC9894FD265D8DF200732CEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9894FC265D8DF200732CEE /* SceneDelegate.swift */; };
 		BC989502265D8DF200732CEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC989500265D8DF200732CEE /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5EA8672664F3E900F5C373 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		BC9894F7265D8DF200732CEE /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9894FA265D8DF200732CEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9894FC265D8DF200732CEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				BC98950E265D960000732CEE /* MainViewController.swift */,
 				BC98953C2662F18F00732CEE /* HobbiesViewController.swift */,
 				BC98953E266306A900732CEE /* PersonInformationViewController.swift */,
+				BC5EA8672664F3E900F5C373 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				BC989511265D964200732CEE /* WelcomeViewController.swift in Sources */,
 				BC98953F266306A900732CEE /* PersonInformationViewController.swift in Sources */,
 				BC98950F265D960000732CEE /* MainViewController.swift in Sources */,
+				BC5EA8682664F3E900F5C373 /* InfoViewController.swift in Sources */,
 				BC9895432663EA2C00732CEE /* User.swift in Sources */,
 				BC9894FB265D8DF200732CEE /* AppDelegate.swift in Sources */,
 				BC989513265E240700732CEE /* Alert.swift in Sources */,

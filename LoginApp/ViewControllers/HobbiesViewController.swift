@@ -24,6 +24,8 @@ class HobbiesViewController: UIViewController{
         journeyLabel.text = hobbies.journey
         itLabel.text = hobbies.it
     }
+    @IBAction func unwindTwoSegue(segue: UIStoryboardSegue){
+    }
 }
 
 
